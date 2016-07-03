@@ -1,4 +1,5 @@
 "use strict";
+
 var forIn = require('mout/object/forIn');
 
 
