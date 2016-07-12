@@ -17,5 +17,8 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/131/udom/issues"
+  },
+  "dependencies": {
+    "mout": "^1.0.0"
   }
 }
