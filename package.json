@@ -1,6 +1,6 @@
 {
   "name": "udom",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "description": "micro dom helpers",
   "main": "index.js",
   "scripts": {
