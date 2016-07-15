@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function(url /*[, type]*/ , callback) {
-  var args = [].slice.apply(url),
+  var args = [].slice.apply(arguments),
       callback = args.pop(),
       url      = args.shift(),
       type     = args.shift() || 'image/png';
