@@ -13,7 +13,7 @@ var  scanRemoved = function() {
     if(document.documentElement.contains(check.dom))
       return;
 
-    removeAll(self.checkDom, check);
+    removeAll(checkDom, check);
     detach(check.cb).call();
   });
 };
@@ -28,5 +28,5 @@ observer.observe(document.documentElement, {
 
 
 module.exports = function(dom, cb) {
-  this.checkDom.push({dom, cb});
+  checkDom.push({dom, cb});
 }
