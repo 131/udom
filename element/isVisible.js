@@ -17,8 +17,9 @@ function isElementInViewport (el) {
 module.exports = function(element){
   if (element.offsetWidth === 0 || element.offsetHeight === 0) return false;
 
+  var root   = document;
   var height = root.documentElement.clientHeight;
-  var rects = element.getClientRects();
+  var rects  = element.getClientRects();
   var on_top = function(r) {
     var x = (r.left + r.right)/2, y = (r.top + r.bottom)/2;
     return element.contains( root.elementFromPoint(x, y) );
