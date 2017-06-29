@@ -6,7 +6,7 @@ module.exports = function(dom) {
   var queryString = {};
   var value;
 
-  forEach(dom.querySelectorAll('input'), function(el) {
+  forEach(dom.querySelectorAll('input, select, textarea'), function(el) {
     var type = el.type;
     var date_mode = (el.type == 'date' || el['value-type'] == 'date');
 
