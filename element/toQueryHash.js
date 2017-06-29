@@ -24,7 +24,7 @@ module.exports = function(dom) {
 
     if (type == 'radio' && el.checked) {
       queryString[el.name] = value;
-    } else if (type == 'checkbox') {
+    } else if (type == 'checkbox' && el.checked) {
       if (!queryString[el.name]) {
         queryString[el.name] = value;
       } else {
