@@ -4,7 +4,7 @@
   "description": "micro dom helpers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint assets element image test window"
   },
   "repository": {
     "type": "git",
@@ -20,5 +20,8 @@
   },
   "dependencies": {
     "mout": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint-plugin-ivs": "^1.0.5"
   }
 }

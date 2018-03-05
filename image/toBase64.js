@@ -1,12 +1,14 @@
 "use strict";
 
-module.exports = function(url /*[, type]*/ , callback) {
-  var args = [].slice.apply(arguments),
-      callback = args.pop(),
-      url      = args.shift(),
-      type     = args.shift() || 'image/png';
+module.exports = function(url /*[, type]*/, callback) {
+  var args     = [].slice.apply(arguments);
+  callback     = args.pop();
+  url          = args.shift();
+  var type     = args.shift() || 'image/png';
 
-  var img = new Image(), canvas, ctx;
+  var img = new Image();
+  var canvas;
+  var ctx;
   img.crossOrigin = 'Anonymous';
   img.onload = function() {
     canvas = document.createElement('canvas');
@@ -19,4 +21,4 @@ module.exports = function(url /*[, type]*/ , callback) {
     canvas = null;
   };
   img.src = url;
-}
+};

@@ -1,15 +1,15 @@
 "use strict";
 
-var  removeAll = require('mout/array/removeAll');
-var  detach    = require('nyks/function/detach');
+const  removeAll = require('mout/array/removeAll');
+const  detach    = require('nyks/function/detach');
 
 var  checkDom = [];
 
-var  scanRemoved = function() {
+const  scanRemoved = function() {
   if(!checkDom.length)
     return;
 
-  checkDom.slice().forEach(function(check, k) {
+  checkDom.slice().forEach(function(check) {
     if(document.documentElement.contains(check.dom))
       return;
 
@@ -18,15 +18,13 @@ var  scanRemoved = function() {
   });
 };
 
-
 var observer = new MutationObserver(scanRemoved);
 
 observer.observe(document.documentElement, {
   childList : true,
-  subtree : true
+  subtree   : true
 });
-
 
 module.exports = function(dom, cb) {
   checkDom.push({dom, cb});
-}
+};

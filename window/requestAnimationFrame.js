@@ -1,10 +1,10 @@
 "use strict";
 
-module.exports = (function(){
+module.exports = (function() {
   return  window.requestAnimationFrame       ||
           window.webkitRequestAnimationFrame ||
           window.mozRequestAnimationFrame    ||
-          function( callback ){
+          function(callback) {
             window.setTimeout(callback, 1000 / 60);
           };
-})();
+}());

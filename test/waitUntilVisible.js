@@ -1,12 +1,13 @@
 "use strict";
-var isVisible = require('../isVisible');
+
+const isVisible = require('../isVisible');
 
 module.exports = function(selector, chain) {
-  var wait = setInterval(function(){
+  var wait = setInterval(function() {
     var element = document.querySelector(selector);
     if(element && isVisible(element)) {
       clearInterval(wait);
       chain();
     }
-  },500);
-}
+  }, 500);
+};

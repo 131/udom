@@ -1,13 +1,14 @@
 "use strict";
 
-var n = require('../element/create');
+const create = require('../element/create');
 
 module.exports = function(filename, dataUrl) {
 
-  var link = n("a", {
-      download : filename,
-      target : "_blank",
-      href : dataUrl});
+  var link = create("a", {
+    download : filename,
+    target   : "_blank",
+    href     : dataUrl
+  });
 
   document.body.appendChild(link);
   link.click();

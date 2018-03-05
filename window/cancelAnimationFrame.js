@@ -1,7 +1,7 @@
 "use strict";
 
-module.exports = (function(){
+module.exports = (function() {
   return  window.cancelAnimationFrame ||
           window.webkitCancelAnimationFrame ||
-          window.mozCancelAnimationFrame
-})();
+          window.mozCancelAnimationFrame;
+}());
